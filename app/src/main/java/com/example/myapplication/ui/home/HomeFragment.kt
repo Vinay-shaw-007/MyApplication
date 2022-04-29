@@ -49,6 +49,7 @@ class HomeFragment : Fragment(), IMessageRVAdapter {
                 homeViewModel.insertMessage(Message(messageText))
                 Toast.makeText(requireContext(), "Value Inserted", Toast.LENGTH_LONG).show()
                 binding.input.text.clear()
+                binding.recyclerView.smoothScrollToPosition(adapter.itemCount + 1)
             }else Toast.makeText(requireContext(), "Please Enter Something", Toast.LENGTH_LONG).show()
         }
         return root
