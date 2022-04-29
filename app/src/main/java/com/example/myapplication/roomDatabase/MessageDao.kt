@@ -15,8 +15,4 @@ interface MessageDao {
     @Transaction
     @Query("Select * From Message_Table")
     fun getAllMessages(): LiveData<List<Message>>
-
-//    @Transaction
-//    @Query("SELECT * FROM Messa")
-//    fun getAllMessages(): LiveData<List<Message>>
 }

@@ -24,6 +24,7 @@ class MessageAdapter(private val listener: IMessageRVAdapter): RecyclerView.Adap
     override fun onBindViewHolder(holder: MessageViewHolder, position: Int) {
         val currentMessage = allMessages[position]
         holder.binding.messageText.text = currentMessage.message
+        holder.binding.messageId.text = currentMessage.id.toString()
     }
 
     override fun getItemCount(): Int {
